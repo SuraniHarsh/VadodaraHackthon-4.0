@@ -61,8 +61,7 @@ Guruzone is an innovative educational platform that connects students with exper
 ## Project Details
 
 - **Name**: vadodara-hackthon-4.0
-- **Version**: 1.0.0
-- **Description**: Vadodara Hackthon 4.0
+- **Description**: Guruzone - Vadodara Hackthon 4.0
 - **Main**: server.js
 
 ## Installation
