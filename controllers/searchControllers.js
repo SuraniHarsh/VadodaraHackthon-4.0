@@ -1,5 +1,6 @@
 const asyncHandler = require("express-async-handler");
 const TeacherProfile = require("../models/TeacherProfileSModel");
+const StudentProfile = require("../models/StudentProfileModel");
 
 /**
  * @desc Search for teacher profiles by first name or last name
