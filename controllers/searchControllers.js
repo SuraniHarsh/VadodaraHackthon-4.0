@@ -4,7 +4,7 @@ const StudentProfile = require("../models/StudentProfileModel");
 
 /**
  * @desc Search for teacher profiles by first name or last name
- * @route GET /api/v1/teachers/search
+ * @route GET /api/v1/search/teacher
  * @access Public
  * @param {string} q - The search query for the teacher's first name or last name
  */
@@ -36,7 +36,7 @@ const teacherSearch = asyncHandler(async (req, res) => {
 
 /**
  * @desc Search for student profiles by first name or last name
- * @route GET /api/v1/students/search
+ * @route GET /api/v1/search/student
  * @access Public
  * @param {string} q - The search query for the student's first name or last name
  */
