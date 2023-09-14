@@ -6,14 +6,6 @@ const studentProfileSchema = new mongoose.Schema({
     ref: 'User', 
     required: true },
 
-  first_name: { type: String, 
-    required: true, 
-    trim: true },
-
-  last_name: { type: String, 
-    required: true, 
-    trim: true },
-
   interests: [{ type: String, 
     trim: true, 
     required: true }],
@@ -27,7 +19,23 @@ const studentProfileSchema = new mongoose.Schema({
 
   about_me: { type: String, 
     trim: true, 
-    required: true }, 
+    required: true },
+    
+    type_of_learning :{
+      type : String,
+      required : true
+    },
+    
+    linkedin : {
+      type : String,
+      required : true
+    },
+
+    number : {
+      type : String,
+      required : true
+    }
+    
 },{
     timestamps : true,
 });
