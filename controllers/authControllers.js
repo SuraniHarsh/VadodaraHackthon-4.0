@@ -126,17 +126,17 @@ const loginUser = asyncHandler(async(req, res) =>{
 const getCurrentUser = async (req, res) => {
   try {
     
-    if (!req.user) {
-      return res.status(401).json({ error: "User not authenticated" });
-    }
+    // if (!req.user) {
+    //   return res.status(401).json({ error: "User not authenticated" });
+    // }
 
-    const currentUser = await User.findById(req.user.id);
+    // const currentUser = await User.findById(req.user.id);
 
-    if (!currentUser) {
-      return res.status(404).json({ error: "User not found" });
-    }
+    // if (!currentUser) {
+    //   return res.status(404).json({ error: "User not found" });
+    // }
 
-    res.status(200).json(currentUser);
+    res.status(200).json(req.user);
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Internal server error" });
