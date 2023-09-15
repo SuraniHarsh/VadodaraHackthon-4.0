@@ -7,6 +7,9 @@ const teacherProfileSchema = new mongoose.Schema({
     ref: 'User',
     required: true,
   },
+  username: { 
+    type: String,
+    required: true },
   background: {
     type : String,
     required : true,

@@ -41,6 +41,7 @@ const registerUser = async (req, res) => {
         if (role === 'student') {
           userProfile = await StudentProfile.create({ 
             user_id: user._id, 
+            username,
             number,
             type_of_learning,
             linkedin,
@@ -49,7 +50,8 @@ const registerUser = async (req, res) => {
             about_me });
         } else if (role === 'teacher') {
            userProfile = await TeacherProfile.create({ 
-            user_id: user._id,  
+            user_id: user._id, 
+            username, 
             background,
             number,
             location,
