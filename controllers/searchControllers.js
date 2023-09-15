@@ -17,10 +17,11 @@ const teacherSearch = asyncHandler(async (req, res) => {
       }
   
       const teacherProfiles = await TeacherProfile.find({
-        $or: [
+          $or: [
             { first_name: { $regex: q, $options: "i" } },
             { last_name: { $regex: q, $options: "i" } },
-          ],
+            { expertise: { $elemMatch: { $regex: q, $options: "i" } } } // Search within the expertise array
+          ]
       });
   
       if (teacherProfiles.length === 0) {
