@@ -35,7 +35,7 @@ const teacherProfileSchema = new mongoose.Schema({
     required : true,
   },
   rating: {
-    type: Number,
+    type: Float32,
     default: 0,
   },
   courses: [{
