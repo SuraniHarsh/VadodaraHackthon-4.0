@@ -1,6 +1,7 @@
 const asyncHandler = require("express-async-handler");
 const StudentProfile = require("../models/StudentProfileModel");
 const Rating = require("../models/ratingModel");
+const { updateTeacherAverageRating } = require("../utils/ratingUtils");
 
 
 const rating = asyncHandler(async (req, res) => {
@@ -19,9 +20,9 @@ try {
 
     const student_id = studentProfile._id;
 
-    const {teacherProfileId, ratingValue, comment} = req.body;
+    const { teacher, rating, comment } = req.body;
 
-    if (!teacherProfileId, !ratingValue) {
+    if (!teacher, !rating) {
          res
            .status(400)
            .json({
@@ -33,11 +34,18 @@ try {
     }
 
     const newRating = await Rating.create({
-        student_id,
-        teacherProfileId,
-        ratingValue,
+        student : student_id,
+        teacher,
+        rating,
         comment
     });
+
+try {
+  await updateTeacherAverageRating(teacher);
+} catch (error) {
+  console.error("Error updating teacher's average rating:", error);
+  // Handle the error as needed
+}
 
     if (newRating) {
         res.status(201).json({ message: "Rating saved successfully" });
@@ -47,7 +55,7 @@ try {
     res.status(500)
     .json({
             message: "An error occurred while saving the rating",
-            error : error.message
+            error : error
         });
     }
 });
