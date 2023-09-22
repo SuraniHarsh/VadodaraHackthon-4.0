@@ -35,7 +35,7 @@ const teacherProfileSchema = new mongoose.Schema({
     required : true,
   },
   rating: {
-    type: Float32,
+    type: String,
     default: 0,
   },
   courses: [{
@@ -51,7 +51,7 @@ const teacherProfileSchema = new mongoose.Schema({
     required : true,
   },
   type_of_learning : {
-    type : String,
+    type : ['100 Personalis', 'Partially Personalis'],
     required : true,
   },
 },{

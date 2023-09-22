@@ -6,6 +6,10 @@ const studentProfileSchema = new mongoose.Schema({
     ref: 'User', 
     required: true },
 
+    username: { 
+      type: String,
+      required: true },
+
   interests: [{ type: String, 
     trim: true, 
     required: true }],
