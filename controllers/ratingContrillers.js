@@ -4,6 +4,11 @@ const Rating = require("../models/ratingModel");
 const { updateTeacherAverageRating } = require("../utils/ratingUtils");
 
 
+/**
+ * @desc Create a new rating and update teacher's average rating
+ * @route POST /api/v1/ratings
+ * @access Private
+ */
 const rating = asyncHandler(async (req, res) => {
 try {
 
