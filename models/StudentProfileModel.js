@@ -23,7 +23,7 @@ const studentProfileSchema = new mongoose.Schema({
 
   about_me: { type: String, 
     trim: true, 
-    required: true },
+    },
     
     type_of_learning :{
       type : String,
