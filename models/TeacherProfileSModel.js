@@ -20,7 +20,7 @@ const teacherProfileSchema = new mongoose.Schema({
   },
   location: {
     type : String,
-    required : true,
+    // required : true,
   },
   language: {
     type : String,
@@ -28,7 +28,7 @@ const teacherProfileSchema = new mongoose.Schema({
   },
   minimal_charge: {
     type : String,
-    required : true,
+    // required : true,
   },
   skill_set: {
     type : [String],
@@ -50,7 +50,7 @@ const teacherProfileSchema = new mongoose.Schema({
     type : String,
   },
   type_of_learning : {
-    type : ['100 Personalis', 'Partially Personalis'],
+    type : String,
     required : true,
   },
 },{
