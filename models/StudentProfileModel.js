@@ -19,7 +19,7 @@ const studentProfileSchema = new mongoose.Schema({
 
   location: { type: String, 
     trim: true, 
-    required: true },
+    },
 
   about_me: { type: String, 
     trim: true, 
@@ -32,7 +32,6 @@ const studentProfileSchema = new mongoose.Schema({
     
     linkedin : {
       type : String,
-      required : true
     },
 
     number : {
