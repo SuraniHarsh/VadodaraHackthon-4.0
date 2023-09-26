@@ -14,6 +14,7 @@ app.use("/api/v1/lessonRequest", require("./routes/lessonRequestRoutes"));
 app.use("/api/v1/search", require("./routes/searchRoutes"));
 app.use("/api/v1/rating", require("./routes/ratingRoutes"));
 app.use("/api/v1/teacher", require("./routes/teacherRoutes"));
+app.use("/api/v1/student", require("./routes/studentRoutes"));
 
 app.listen(port, (req, res) =>{
     console.log(` => http://localhost:${port}/ :)`);
