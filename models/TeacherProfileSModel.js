@@ -48,7 +48,6 @@ const teacherProfileSchema = new mongoose.Schema({
   },
   linkedin : {
     type : String,
-    required : true,
   },
   type_of_learning : {
     type : ['100 Personalis', 'Partially Personalis'],
