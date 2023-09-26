@@ -1,6 +1,11 @@
 const asyncHandler = require("express-async-handler");
 const StudentProfile = require("../models/StudentProfileModel");
 
+/**
+ * @desc Get student profile by user ID
+ * @route GET /api/v1/student/profile
+ * @access Private
+ */
 const studentProfile = asyncHandler(async (req, res) => {
     try {
         

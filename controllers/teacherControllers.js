@@ -2,6 +2,11 @@ const asyncHandler = require("express-async-handler");
 const { getTeachersByLocationAndRating } = require("../utils/filterUtils");
 const TeacherProfile = require("../models/TeacherProfileSModel");
 
+/**
+ * @desc Get teacher profile by user ID
+ * @route GET /api/v1/teacher/profile
+ * @access Private
+ */
 const teacherProfile = asyncHandler(async (req, res) => {
   try {
 
